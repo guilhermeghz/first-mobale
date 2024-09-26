@@ -4,61 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoem-Mapfre</title>
-    <link rel="shortcut" href="/assents/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/assents/css/style.css">
+    <title>mobile_firt_1.1.0</title>
+    <link rel="shortcut icon" href="./assets/faviconaboult.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/index.css">
+
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+        <!-- Na sequencia de acima para baixo: colocado como favicon; 
+         link para o css do menu mobile; link para o css do google fonts -->
 
 </head>
 
-<body>
+<!-- Criado uma função para quando o tamanho da tela for menor que 768px,
+  o menu mobile será ativado -->
+
+<body onresize="mudouTamanho()">
     <header>
-        <h1> mapfre, uma empresa de seguro </h1>
+        <h1>The Mobile Firt - Menu</h1>
     </header>
+    <!-- Usando o google icons o menu é criado, junto com uma função usado no
+      javascript para exibir o menu burger no evento de onclik-->
+    <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">
+        menu
+    </span>
+    <!-- Todos os links do menu pertence ao um conteiner com uma lista não numerada
+     e um id para ser usado no Medias Queries-->
 
-<nav>
-    <a href="index.html"><img src="assents/faviconhome.png" alt="" id="iconenav">Home</a>
-    <a href="client.html"><img src="assents/faviconhand.png" alt="" id="iconenav">client</a>
-    <a href="network.html"><img src="assents/favicongroup.png" alt="" id="iconenav">network</a>
-    <a href="about.html"><img src="assents/faviconaboult.png" alt="" id="iconenav">aboult</a>
-</nav>
+    <menu id="itens">
+        <ul>
+            <li><a href="#">mobile</a></li>
+            <li><a href="#"> tablet</a></li>
+            <li><a href="#">smart_tv</a></li>
+            <li><a href="#">desktop</a></li>
+        </ul>
+    </menu>
 
+    <!-- Todas as imagens são oculta pelo atributo none, e a cada mudança de resolução
+      de tela será exibido somente as imagens que pertence a cada tela-->
+    <main>
+        <img src="/assets/icon-phone.png" alt="teste com celular" id="mobile">
 
-<main>
-    <div class="imgmain">
-        <img src="assents/mapfre.jpeg" alt="logo mapfre" width="100" height="70">
-    </div>
-     <img src="assents/mapfre.jpeg" alt="logo mapfre"  width="100" height="100">
+        <img src="/assets/icon-tablet.png" alt="teste com celular" id="tablet">
 
-    <img src="assents/logo3.jpg" alt="logo mapfre sem fundo">
-    <img src="assents/mapfre logo-2.jpeg" alt="logo mapfre">
-    <img src="assents/predio.2.jpg" alt="predio da mapfre">
-    <img src="assents/predioooooo.jpg" alt="predio da mapfre com arvores">
-    <img src="assents/predio.3.webp" alt="um predio da mapfre">
-    <img src="assents/equepe.jpeg" alt="equipe da mapfre"> 
+        <img src="/assets/icon-print.png" alt="versão impressora" id="print">
 
-    <!--editar um texto continuo, paragrafo 
-  aqui podemos cotinua escrevendo por aqui-->
-    <p>
-        Abertura e acompanhamento de Sinistro. Comunique o seu sinistro na MAPFRE Seguros. Siga as orientações abaixo.
-        Ligue para o telefone de Comunicação de Sinistro e Assistência 24 horas: …Abertura e acompanhamento de sinistro
-        Brasil Abertura e acompanhamento de Sinistro. Comunique o seu sinistro na MAPFRE Seguros. Siga as orientações
-        abaixo. Ligue para o telefone de Comunicação de Sinistro e Assistência 24 horas: …vAbertura e acompanhamento
-        de sinistro MAPFRE Brasil Abertura e acompanhamento de Sinistro. Comunique o seu sinistro na MAPFRE
-        Seguros. Siga as orientações abaixo. Ligue para o telefone de Comunicação de Sinistro e Assistência 24
-        horas: …vAbertura e acompanhamento de sinistro MAPFRE Brasil Abertura e acompanhamento de Sinistro.
-        Comunique o seu sinistro na MAPFRE Seguros. Siga as orientações abaixo. Ligue para o telefone de Comunicação
-        de Sinistro e Assistência 24 horas: …Abertura e acompanhamento de sinistro Abertura e acompanhamento de
-        Sinistro. Comunique o seu sinistro na MAPFRE Seguros. Siga as orientações abaixo. Ligue para o telefone de
-        Comunicação de Sinistro e As
-    </p>
+        <img src="/assets/icon-pc.png" alt="teste com desktop" id="pc">
 
-</main>
+        <img src="/assets/icon-tv.png" alt="teste com smart tv" id="tv">
 
-<footer>@2024- guilherme vieira</footer>
+        <!-- Dentro  do main foi criado um div com um id para ser usado no Medias Queries
+         e dentro dele foi criado um div com um id para ser usado no Medias Queries
+         onde a estrutura article será redimencionada para cada visualização de tela-->
 
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, veniam itaque! Iste
+                natus excepturi molestiae
+                inventore facere nisi nesciunt ad, dolore aliquam architecto eveniet deleniti ab mollitia repellendus
+                nulla.
+                Quam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates magni consectetur incidunt
+                facere
+                cupiditate ex aperiam praesentium quam quibusdam. Quia molestiae maiores ex nulla provident, in sequi
+                eveniet
+                accusamus placeat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam adipisci laboriosam
+                asperiores
+                pariatur. Dicta nisi accusamus adipisci corporis ducimus fuga optio totam, ullam mollitia veniam et
+                libero minus
+                qui voluptatum.
+            </p>
 
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, veniam itaque! Iste
+                natus excepturi molestiae
+                inventore facere nisi nesciunt ad, dolore aliquam architecto eveniet deleniti ab mollitia repellendus
+                nulla.
+                Quam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates magni consectetur incidunt
+                facere
+                cupiditate ex aperiam praesentium quam quibusdam. Quia molestiae maiores ex nulla provident, in sequi
+                eveniet
+                accusamus placeat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam adipisci laboriosam
+                asperiores
+                pariatur. Dicta nisi accusamus adipisci corporis ducimus fuga optio totam, ullam mollitia veniam et
+                libero minus
+                qui voluptatum.
+            </p>
 
+        </article>
 
+    </main>
+
+    <footer>
+        <p>
+            @guilherme vie - Mobile First - 2024
+        </p>
+    </footer>
+    <!--  -->
+    <script src="./assets/js/scriptmq.js"></script>
 
 </body>
 
